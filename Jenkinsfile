@@ -23,7 +23,7 @@ pipeline {
         }
         stage("Deploy"){
             steps{
-                sh "docker stack deploy - c docker-compose.yml mystack"
+                sh "docker stack deploy -c docker-compose.yml mystack"
             }
         }
     }
