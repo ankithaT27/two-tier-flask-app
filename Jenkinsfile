@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    environment {
+        MYSQL_USER = credentials('DB_USER')                     // Reference for MySQL user
+        MYSQL_PASSWORD = credentials('DB_PASSWORD')             // Reference for MySQL password
+    }
     
     stages{
         stage("Code"){
