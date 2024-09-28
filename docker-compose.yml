@@ -2,7 +2,7 @@ version: '3'
 services:
   
   backend:
-    image: ankitha2798/flaskapp
+    image: ankitha2798/flaskapp:latest
     ports:
       - "5000:5000"
     environment:
