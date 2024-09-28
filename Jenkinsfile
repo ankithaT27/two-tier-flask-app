@@ -23,8 +23,6 @@ pipeline {
         }
         stage("Deploy"){
             steps{
-                script
-                {
                 withCredentials([usernamePassword(credentialsId: 'db-credentials', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASSWORD')]) {
                 sh "docker stack deploy -c docker-compose.yml mystack"
             }
